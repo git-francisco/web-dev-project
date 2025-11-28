@@ -1,38 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order | Fleur De Paris</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order | Fleur De Paris</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Order Form</h1>
-  </header>
 
-  <nav>
+<!-- Page Header -->
+<header class="page-header">
+    <h1>Place Your Order</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
     <a href="orders.html" class="active">Order</a>
     <a href="contact.html">Contact</a>
-  </nav>
+</nav>
 
-  <section>
-    <form>
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required>
+<!-- Order Form -->
+<section class="section order">
+    <h2>Order Form</h2>
 
-      <label for="contact">Contact Number:</label>
-      <input type="text" id="contact" name="contact" required>
+    <!-- FORM na hindi nagsa-submit sa server -->
+    <!-- JS redirect lang papunta sa thank-you page -->
+    <form onsubmit="return redirectToThankYou()" class="order-form">
 
-      <a href="thank-you.html" class="btn">Submit Order</a>
+        <!-- Pangalan ng customer -->
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <!-- Product selection -->
+        <label>Product:</label>
+        <select name="product">
+            <option>Classic Bouquet</option>
+            <option>Red Roses</option>
+            <option>Sunflower Arrangement</option>
+        </select>
+
+        <!-- Delivery Address -->
+        <label>Address:</label>
+        <textarea name="address" required></textarea>
+
+        <!-- Date ng delivery -->
+        <label>Date:</label>
+        <input type="date" name="date" required>
+
+        <!-- Contact Number -->
+        <label>Contact Number:</label>
+        <input type="text" name="contact" required>
+
+        <!-- Button to submit -->
+        <button type="submit">Submit Order</button>
     </form>
-  </section>
+</section>
 
-  <footer>
+<footer>
     <p>&copy; 2025 Fleur De Paris</p>
-  </footer>
+</footer>
+
+<!-- JavaScript Redirect -->
+<script>
+/* 
+  Kapag na-submit ang form, 
+  hindi siya magsa-submit sa server.
+  Instead, ita-transfer ka lang niya sa thank-you page.
+*/
+function redirectToThankYou() {
+    window.location.href = "thank-you.html";
+    return false; // pinipigilan ang real form submission
+}
+</script>
+
 </body>
 </html>

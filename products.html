@@ -1,31 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | Fleur De Paris</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Fleur De Paris</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Our Products</h1>
-  </header>
 
-  <nav>
+<!-- Header -->
+<header class="page-header">
+    <h1>Our Products</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html" class="active">Products</a>
     <a href="orders.html">Order</a>
     <a href="contact.html">Contact</a>
-  </nav>
+</nav>
 
-  <section>
-    <h2>Classic Bouquet</h2>
-    <p>Simple and elegant arrangement for any occasion.</p>
-  </section>
+<!-- Product list -->
+<section class="section products">
+    <h2>Flower Arrangements</h2>
 
-  <footer>
-    <p>&copy; 2025 Fleur De Paris</p>
-  </footer>
+    <!-- Grid layout ng products -->
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="prod2.jpg" alt="Classic Bouquet">
+            <h3>Classic Bouquet</h3>
+            <p>Parisian charm in every detail.</p>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="prod3.jpg" alt="Red Roses">
+            <h3>Red Roses</h3>
+            <p>The symbol of timeless love.</p>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="prod4.jpg" alt="Sunflower Arrangement">
+            <h3>Sunflower Arrangement</h3>
+            <p>Bright and radiant energy.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Fleur De Paris</p>
+</footer>
+
 </body>
 </html>

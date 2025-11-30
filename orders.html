@@ -29,28 +29,36 @@
     <form action="thank-you.html" class="order-form">
 
         <!-- Pangalan ng customer -->
-        <label>Name:</label>
-        <input type="text" name="name" required>
+        <label>Sender:</label>
+        <input type="text" name="Sender" required>
 
-        <!-- Product selection -->
-        <label>Product:</label>
-        <select name="product">
-            <option>Classic Bouquet</option>
-            <option>Red Roses</option>
-            <option>Sunflower Arrangement</option>
-        </select>
+         <label>Name of Reciever:</label>
+        <input type="text" name="Reciever" required>
 
-        <!-- Delivery Address -->
-        <label>Address:</label>
-        <textarea name="address" required></textarea>
+         <label>Contact Number:</label>
+        <input type="text" name="contact" required>
 
-        <!-- Date ng delivery -->
         <label>Date:</label>
         <input type="date" name="date" required>
 
-        <!-- Contact Number -->
-        <label>Contact Number:</label>
-        <input type="text" name="contact" required>
+        <label>Time:</label>
+        <input type="time" name="time" required>
+
+        <label>Address:</label>
+        <textarea name="address" required></textarea>
+
+        <label>Notes:</label>
+         <textarea name="notes" placeholder="Optional message..."></textarea>
+         <label>Mode of Payment:</label>
+    <select name="payment" required>
+        <option value="Gcash">Gcash</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+    </select>
+
+        <label>Gcash Information:</label>
+    <p style="color: gold; font-size: 0.9rem; margin-bottom: 0.5rem;">
+        Gcash: <strong>0916-746-2039</strong> — Joni-Jenny Fortaleza
+    </p>
 
         <!-- Button to submit -->
         <button type="submit">Submit Order</button>

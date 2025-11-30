@@ -26,9 +26,7 @@
 <section class="section order">
     <h2>Order Form</h2>
 
-    <!-- FORM na hindi nagsa-submit sa server -->
-    <!-- JS redirect lang papunta sa thank-you page -->
-    <form onsubmit="return redirectToThankYou()" class="order-form">
+    <form action="thank-you.html" class="order-form">
 
         <!-- Pangalan ng customer -->
         <label>Name:</label>
@@ -63,18 +61,7 @@
     <p>&copy; 2025 Fleur De Paris</p>
 </footer>
 
-<!-- JavaScript Redirect -->
-<script>
-/* 
-  Kapag na-submit ang form, 
-  hindi siya magsa-submit sa server.
-  Instead, ita-transfer ka lang niya sa thank-you page.
-*/
-function redirectToThankYou() {
-    window.location.href = "thank-you.html";
-    return false; // pinipigilan ang real form submission
-}
-</script>
+
 
 </body>
 </html>
